@@ -5,7 +5,7 @@ ENV VER ${VER}
 
 COPY pom.xml /app/pom.xml
 COPY src /app/src
-RUN mvn -Drevision=${VER} -s /app/settings.xml clean package -f /app/
+RUN mvn -Drevision=${VER} clean package -f /app/
 
 FROM openjdk:11.0.3-jdk-stretch
 

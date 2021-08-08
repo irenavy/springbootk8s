@@ -15,4 +15,4 @@ ENV VER ${VER}
 RUN apt-get update
 RUN apt-get install -y --no-install-recommends telnet curl
 COPY --from=build ./app/target/springapp-*.jar /
-CMD ["sh", "-c", "java -jar springapp-${VER}.jar"]
+CMD ["sh", "-c", "java -jar springapp-0.0.1-SNAPSHOT.jar"]
